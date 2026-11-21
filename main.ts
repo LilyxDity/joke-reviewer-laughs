@@ -2,6 +2,8 @@
 // agents to /output/entry.txt (make.fun entry for
 // "The joke the reviewer laughs at"). No network, deterministic.
 // Entry rule: 1–280 Unicode code points, one line, no trailing newline.
+// The em-dash in the joke is a single code point; keep the joke on one line
+// and do not add punctuation that would change its length.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
